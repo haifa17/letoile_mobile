@@ -42,13 +42,16 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { href: "#portabilite", label: "Portabilité" },
-            { href: "#migration", label: "Migration" },
-            { href: "#offres", label: "Offres" },
-            { href: "#faq", label: "FAQ" },
+            {
+              href: { pathname: "/", hash: "portabilite" },
+              label: "Portabilité",
+            },
+            { href: { pathname: "/", hash: "migration" }, label: "Migration" },
+            { href: { pathname: "/", hash: "offres" }, label: "Offres" },
+            { href: { pathname: "/", hash: "faq" }, label: "FAQ" },
           ].map((item) => (
             <Link
-              key={item.href}
+              key={item.label}
               href={item.href}
               className={`relative ${isScrolled ? "text-foreground/70 hover:text-foreground" : "text-white hover:text-white/70"} transition group`}
             >
@@ -71,7 +74,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors text-foreground hover:text-primary"
+            className={`md:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors hover:text-primary ${isScrolled ? "text-foreground/70 hover:text-foreground" : "text-white hover:text-white/70"}`}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,15 +88,21 @@ export default function Header() {
         >
           <div className="px-4 py-4 space-y-2">
             {[
-              { href: "#portabilite", label: "Portabilité" },
-              { href: "#migration", label: "Migration" },
-              { href: "#offres", label: "Offres" },
-              { href: "#faq", label: "FAQ" },
+              {
+                href: { pathname: "/", hash: "portabilite" },
+                label: "Portabilité",
+              },
+              {
+                href: { pathname: "/", hash: "migration" },
+                label: "Migration",
+              },
+              { href: { pathname: "/", hash: "offres" }, label: "Offres" },
+              { href: { pathname: "/", hash: "faq" }, label: "FAQ" },
             ].map((item) => (
               <Link
-                key={item.href}
+                key={item.label}
                 href={item.href}
-                className="block px-4 py-2 text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition"
+                className={`block px-4 py-2 ${isScrolled ? "text-foreground/70 hover:text-foreground" : "text-white hover:text-white/70"} rounded-lg transition`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
