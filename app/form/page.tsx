@@ -106,7 +106,7 @@ export default function FormPage() {
 
           {/* Steps indicator */}
           <div className="px-8 pt-8 pb-6">
-            <div className="flex items-start justify-between relative">
+            <div className="flex flex-wrap items-start justify-between relative">
               {/* connector line */}
               <div className="absolute top-4 left-0 right-0 h-px bg-gray-200 -z-0" />
               {STEPS.map((label, i) => {

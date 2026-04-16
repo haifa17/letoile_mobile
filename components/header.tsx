@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-const router=useRouter()
+  const router = useRouter();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -60,7 +60,10 @@ const router=useRouter()
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <button onClick={()=>router.push("/form")} className="hidden cursor-pointer sm:block group relative bg-primary text-primary-foreground px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 transform hover:scale-105">
+          <button
+            onClick={() => router.push("/form")}
+            className="hidden cursor-pointer sm:block group relative bg-primary text-primary-foreground px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 transform hover:scale-105"
+          >
             <span className="relative z-10">Formulaire</span>
             <div className="absolute inset-0 bg-primary/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
           </button>
@@ -96,9 +99,12 @@ const router=useRouter()
                 {item.label}
               </Link>
             ))}
-            <button className="w-full bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition font-bold mt-4">
+            <Link
+              href="/form"
+              className="w-full bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition font-bold mt-4"
+            >
               Formulaire
-            </button>
+            </Link>
           </div>
         </div>
       )}

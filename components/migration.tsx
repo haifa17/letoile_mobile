@@ -54,7 +54,7 @@ export default function Migration() {
                   <div className="flex-1 h-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
                 </div>
 
-                <div className="flex gap-8 relative z-10">
+                <div className="flex flex-col md:flex-row gap-8 relative z-10">
                   {migrationSteps.map((step, idx) => (
                     <div
                       key={step.number}
@@ -63,7 +63,7 @@ export default function Migration() {
                         animationDelay: isMounted ? `${idx * 0.15}s` : "0s",
                       }}
                     >
-                      <div className="space-y-6 relative w-sm ">
+                      <div className="space-y-6 relative md:w-sm ">
                         {/* Card Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl blur-xl group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300"></div>
 
