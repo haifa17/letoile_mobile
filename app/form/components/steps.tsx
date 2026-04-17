@@ -1,4 +1,3 @@
-
 // ── Steps ──────────────────────────────────────────────────────────────────
 export interface FormData {
   // Step 1 – Informations de base
@@ -13,7 +12,7 @@ export interface FormData {
   // Step 3 – Pièce d'identité
   idType: string;
   idNumber: string;
-  idFile: File | null;
+  idFile: File[] | null;
   // Step 4 – Portabilité
   rioCode: string;
   portabilityDate: string;
@@ -72,7 +71,7 @@ function Input({
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-sm font-semibold text-gray-700">
-        {label} {required && <span className="text-black">*</span>}
+        {label} {required && <span className="text-red-500">*</span>}
       </label>
       <input
         {...props}
@@ -143,6 +142,14 @@ export function Step2({
   data: FormData;
   update: (d: Partial<FormData>) => void;
 }) {
+  const today = new Date();
+  const minAgeDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate(),
+  )
+    .toISOString()
+    .split("T")[0];
   return (
     <div className="flex flex-col gap-5">
       <div className="grid grid-cols-2 gap-4">
@@ -170,9 +177,10 @@ export function Step2({
         onChange={(e) => update({ email: e.target.value })}
       />
       <Input
-        label="Date de naissance"
+        label="Date de naissance(doit avoir au moins 18 ans)"
         required
         type="date"
+        max={minAgeDate}
         value={data.birthDate}
         onChange={(e) => update({ birthDate: e.target.value })}
       />
@@ -209,6 +217,8 @@ export function Step3({
         label="Numéro de la pièce"
         required
         placeholder="Ex: 12345678"
+        pattern="\d{8,}"
+        minLength={8}
         value={data.idNumber}
         onChange={(e) => update({ idNumber: e.target.value })}
       />
@@ -218,18 +228,52 @@ export function Step3({
         </label>
         <label className="flex flex-col items-center justify-center gap-2 w-full h-36 border-2 border-dashed border-gray-300 rounded-2xl cursor-pointer hover:border-black transition-colors bg-gray-50">
           <span className="text-3xl">📎</span>
-          <span className="text-sm text-gray-500">
-            {data.idFile
-              ? data.idFile.name
-              : "Cliquez pour téléverser votre document"}
+          <span className="text-sm text-gray-500 text-center px-4">
+            {data.idFile && data.idFile.length > 0
+              ? `${data.idFile.length} fichier(s) sélectionné(s): ${data.idFile.map((f) => f.name).join(", ")}`
+              : "Cliquez pour téléverser recto et verso (2 fichiers max)"}
           </span>
           <input
             type="file"
             className="hidden"
             accept="image/*,.pdf"
-            onChange={(e) => update({ idFile: e.target.files?.[0] ?? null })}
+            multiple // ← allow multiple files
+            onChange={(e) => {
+              const files = Array.from(e.target.files ?? []);
+              if (files.length > 2) {
+                alert("Vous pouvez téléverser au maximum 2 fichiers.");
+                return;
+              }
+              update({ idFile: files });
+            }}
           />
         </label>
+        {/* Preview selected files */}
+        {data.idFile && data.idFile.length > 0 && (
+          <div className="flex flex-col gap-2 mt-2">
+            {data.idFile.map((file, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between px-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm"
+              >
+                <span className="text-gray-700 truncate max-w-[80%]">
+                  📄 {file.name}
+                </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    update({
+                      idFile: data.idFile!.filter((_, j) => j !== i),
+                    })
+                  }
+                  className="text-red-400 hover:text-red-600 font-bold ml-2"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -262,6 +306,7 @@ export function Step4({
         label="Date de portabilité souhaitée"
         required
         type="date"
+        min={new Date().toISOString().split("T")[0]}
         value={data.portabilityDate}
         onChange={(e) => update({ portabilityDate: e.target.value })}
       />

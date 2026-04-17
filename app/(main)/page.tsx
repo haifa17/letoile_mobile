@@ -1,10 +1,10 @@
-import Hero from "@/components/hero";
-import Banner from "@/components/banner";
-import Portability from "@/components/portability";
-import Migration from "@/components/migration";
-import Offers from "@/components/offers";
-import FAQ from "@/components/faq";
-import SoundCloudPlayer from "@/components/SoundCloudPlayer";
+import Hero from "@/app/(main)/components/hero";
+import Banner from "@/app/(main)/components/banner";
+import Portability from "@/app/(main)/components/portability";
+import Migration from "@/app/(main)/components/migration";
+import Offers from "@/app/(main)/components/offers";
+import FAQ from "@/app/(main)/components/faq";
+import SoundCloudPlayer from "@/app/(main)/components/SoundCloudPlayer";
 
 export default function Home() {
   return (

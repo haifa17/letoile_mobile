@@ -1,9 +1,8 @@
-
 import { Analytics } from "@vercel/analytics/next";
 import "./../globals.css";
-import SoundCloudPlayer from "@/components/SoundCloudPlayer";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import SoundCloudPlayer from "@/app/(main)/components/SoundCloudPlayer";
+import Header from "@/app/(main)/components/header";
+import Footer from "@/app/(main)/components/footer";
 
 export default function RootLayout({
   children,

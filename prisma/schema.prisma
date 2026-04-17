@@ -15,3 +15,31 @@ model User {
   password  String
   createdAt DateTime @default(now())
 }
+model FormSubmission {
+  id                String   @id @default(cuid())
+
+  // Step 1
+  currentNumber     String
+  previousOperator  String
+  customerType      String
+
+  // Step 2
+  firstName         String
+  lastName          String
+  email             String
+  birthDate         DateTime
+
+  // Step 3
+  idType            String
+  idNumber          String
+  idFileUrl         String[]  
+
+  // Step 4
+  rioCode           String
+  portabilityDate   DateTime
+
+  // Metadata
+  status            String   @default("pending")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
