@@ -5,8 +5,8 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import React from "react";
-import LoginForm from "./components/login-form";
 import Link from "next/link";
+import RegisterForm from "./components/register-form";
 
 const page = () => {
   return (
@@ -28,10 +28,10 @@ const page = () => {
               LETOILE MOBILE
             </span>
           </Link>
-          <CardDescription>Plateforme Admin </CardDescription>
+          <CardDescription>Plateforme Inscription Admin </CardDescription>
         </CardHeader>
         <CardContent>
-          <LoginForm />
+          <RegisterForm />
         </CardContent>
       </Card>
     </main>

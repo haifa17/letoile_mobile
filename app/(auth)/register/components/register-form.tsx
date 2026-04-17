@@ -6,28 +6,36 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import axios from "axios";
+import Link from "next/link";
 
-export default function LoginForm() {
+export default function RegisterForm() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
   });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
+    // Validate passwords match
+    if (formData.password !== formData.confirmPassword) {
+      setError("Les mots de passe ne correspondent pas");
+      return;
+    }
+
+    // Validate password length
+    if (formData.password.length < 6) {
+      setError("Le mot de passe doit contenir au moins 6 caractères");
+      return;
+    }
     startTransition(async () => {
       try {
-        const { data } = await axios.post("/api/auth/login", formData);
+        const { data } = await axios.post("/api/auth/register", formData);
         if (data.success) {
-          // if (data.user.role === "admin") {
-          //   router.push("/dashboard");
-          // } else {
-          //   router.push("/");
-          // }
-          router.push("/dashboard")
+          router.push("/login");
           router.refresh();
         } else {
           setError(data.error || "Connection failed");
@@ -73,10 +81,40 @@ export default function LoginForm() {
           disabled={isPending}
         />
       </div>
-
-      <Button type="submit" className="w-full cursor-pointer bg-red-600" disabled={isPending}>
-        {isPending ? "Connexion..." : "Se connecter"}
+      <div className="space-y-2">
+        <Label htmlFor="confirmPassword">Confirmer le mot de passe</Label>
+        <Input
+          id="confirmPassword"
+          type="password"
+          placeholder="••••••••"
+          value={formData.confirmPassword}
+          onChange={(e) =>
+            setFormData({ ...formData, confirmPassword: e.target.value })
+          }
+          required
+          disabled={isPending}
+        />
+        {/* Show mismatch warning in real time */}
+        {formData.confirmPassword &&
+          formData.password !== formData.confirmPassword && (
+            <p className="text-xs text-red-500">
+              Les mots de passe ne correspondent pas
+            </p>
+          )}
+      </div>
+      <Button
+        type="submit"
+        className="w-full cursor-pointer bg-red-600"
+        disabled={isPending || formData.password !== formData.confirmPassword}
+      >
+        {isPending ? "Inscription..." : "S'inscrire"}
       </Button>
+      <div className="text-xs flex justify-end gap-1 mt-2 text-muted-foreground">
+        Vous avez déjà un compte?{" "}
+        <Link href="/login" className="text-primary hover:underline">
+          Se connecter
+        </Link>
+      </div>
     </form>
   );
 }

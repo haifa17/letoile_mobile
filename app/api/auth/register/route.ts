@@ -8,13 +8,19 @@ export async function POST(req: NextRequest) {
 
     // 1. Validate fields
     if (!email || !password) {
-      return NextResponse.json({ error: "Email and password are required" }, { status: 400 });
+      return NextResponse.json(
+        { error: "Email and password are required" },
+        { status: 400 },
+      );
     }
 
     // 2. Check if user already exists
     const existingUser = await prisma.user.findUnique({ where: { email } });
     if (existingUser) {
-      return NextResponse.json({ error: "User already exists" }, { status: 409 });
+      return NextResponse.json(
+        { error: "User already exists" },
+        { status: 409 },
+      );
     }
 
     // 3. Hash password
@@ -28,8 +34,14 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    return NextResponse.json({ message: "User created successfully", userId: user.id }, { status: 201 });
+    return NextResponse.json(
+      { success: true, userId: user.id },
+      { status: 201 },
+    );
   } catch (error) {
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }
