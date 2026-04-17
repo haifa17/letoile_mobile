@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LogOut } from "lucide-react";
-import SidebarItems from "../SidebarItems";
+import SidebarItems from "./SidebarItems";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 export const Sidebar = ({

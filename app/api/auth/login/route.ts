@@ -33,7 +33,13 @@ export async function POST(req: NextRequest) {
     );
 
     // 4. Set token in httpOnly cookie
-    const response = NextResponse.json({ success: true });
+    const response = NextResponse.json({
+      success: true,
+      user: {
+        id: user.id,
+        email: user.email,
+      },
+    });
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
