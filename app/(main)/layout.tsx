@@ -3,6 +3,7 @@ import "./../globals.css";
 import SoundCloudPlayer from "@/app/(main)/components/SoundCloudPlayer";
 import Header from "@/app/(main)/components/header";
 import Footer from "@/app/(main)/components/footer";
+import { ToastContainer } from "react-toastify";
 
 export default function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default function RootLayout({
       <Header />
       {children}
       {process.env.NODE_ENV === "production" && <Analytics />}
+       <ToastContainer />
       <Footer />
     </>
   );

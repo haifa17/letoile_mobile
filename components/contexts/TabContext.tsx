@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useState, ReactNode } from "react";
 
-export type Tab = "dashboard" | "form"| "info";
+export type Tab = "dashboard" | "form"| "contact" | "info";
 
 interface TabContextType {
   activeTab: Tab;

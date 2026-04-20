@@ -16,7 +16,8 @@ const SidebarItems = () => {
       label: "Formumlaire Portabilités",
       icon: <Smartphone size={18} />,
     },
-    { key: "info", label: "Infos du restaurant", icon: <Settings size={18} /> },
+    { key: "contact", label: "Formumlaire de contact", icon: <FolderOpen size={18} /> },
+    { key: "info", label: "Infos ", icon: <Settings size={18} /> },
   ];
 
   return (

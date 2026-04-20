@@ -49,6 +49,7 @@ export default function Header() {
             { href: { pathname: "/", hash: "migration" }, label: "Migration" },
             { href: { pathname: "/", hash: "offres" }, label: "Offres" },
             { href: { pathname: "/", hash: "faq" }, label: "FAQ" },
+            { href: { pathname: "/", hash: "contact" }, label: "Contact" },
           ].map((item) => (
             <Link
               key={item.label}
@@ -98,6 +99,7 @@ export default function Header() {
               },
               { href: { pathname: "/", hash: "offres" }, label: "Offres" },
               { href: { pathname: "/", hash: "faq" }, label: "FAQ" },
+              { href: { pathname: "/", hash: "contact" }, label: "Contact" },
             ].map((item) => (
               <Link
                 key={item.label}

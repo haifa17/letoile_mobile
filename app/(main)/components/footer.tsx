@@ -13,7 +13,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-b from-foreground to-black text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-foreground to-black text-white relative overflow-hidden pointer-events-none">
       {/* Animated background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float opacity-50={value.toString()}."></div>
       <div

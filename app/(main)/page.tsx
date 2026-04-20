@@ -5,6 +5,7 @@ import Migration from "@/app/(main)/components/migration";
 import Offers from "@/app/(main)/components/offers";
 import FAQ from "@/app/(main)/components/faq";
 import SoundCloudPlayer from "@/app/(main)/components/SoundCloudPlayer";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Offers />
       {/* <Trust /> */}
       <FAQ />
+      <Contact />
     </main>
   );
 }

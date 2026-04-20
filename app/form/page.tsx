@@ -128,6 +128,7 @@ export default function FormPage() {
       });
 
       setSubmitted(true);
+      setIsSubmitting(false);
     } catch (error) {
       console.error("Submit error:", error);
       setIsSubmitting(false);
