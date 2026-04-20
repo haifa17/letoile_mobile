@@ -19,7 +19,6 @@ export default function Hero() {
           backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/653705371_1349515490545812_8086228508389763338_n-IlMTSejTR1JME1pQ7uHXJqHjqfedMt.jpg)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
         }}
       >
         {/* Dark Gradient Overlay */}
