@@ -1,5 +1,11 @@
 import React from "react";
-import { FolderOpen, LayoutDashboard, QrCode, Settings, Smartphone, UtensilsCrossed } from "lucide-react";
+import {
+  FolderOpen,
+  LayoutDashboard,
+  QrCode,
+  Settings,
+  Smartphone,
+} from "lucide-react";
 import { Tab, useTab } from "@/components/contexts/TabContext";
 
 const SidebarItems = () => {
@@ -16,7 +22,12 @@ const SidebarItems = () => {
       label: "Formumlaire Portabilités",
       icon: <Smartphone size={18} />,
     },
-    { key: "contact", label: "Formumlaire de contact", icon: <FolderOpen size={18} /> },
+    {
+      key: "contact",
+      label: "Formumlaire de contact",
+      icon: <FolderOpen size={18} />,
+    },
+    { key: "qr", label: "QR Code", icon: <QrCode size={18} /> },
     { key: "info", label: "Infos ", icon: <Settings size={18} /> },
   ];
 

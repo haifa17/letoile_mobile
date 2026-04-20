@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/table";
 
 import { useQuery } from "@tanstack/react-query";
-import Link from "next/link";
 import { ContactFormSubmission } from "@prisma/client";
 
 const fetchForms = async () => {

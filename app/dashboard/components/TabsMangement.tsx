@@ -1,12 +1,13 @@
 "use client";
 
 import ContactsPage from "./ContactsPage";
-import DashboardPage from "./DashboardPage";
-import FormsPage from "./FormsPage";
+import { DashboardPage } from "./DashboardPage";
+import FormsPage from "./PortabilityFormsPage";
+import { QRCodePage } from "./QRPage";
 
 
 interface Props {
-  activeTab: "dashboard" |"form"|"contact"| "info"
+  activeTab: "dashboard" |"form"|"contact"| "qr" | "info"
 }
 
 export function TabsMangement({ activeTab }: Props) {
@@ -17,6 +18,8 @@ export function TabsMangement({ activeTab }: Props) {
       return <FormsPage/>;
     case "contact":
       return <ContactsPage/>;
+    case "qr":
+      return <QRCodePage/>;
 
     // case "info":
     //   return <RestaurantInfoPage restaurantId={restaurantId} />;
