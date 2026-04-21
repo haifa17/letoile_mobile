@@ -38,19 +38,19 @@ export default function Hero() {
           <div
             className={`space-y-8 ${isMounted ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-balance leading-tight">
+            <div className="space-y-4 ">
+              <h1 className="text-5xl  font-heading capitalize md:text-6xl lg:text-7xl font-extrabold text-white text-balance leading-tight">
                 Votre nouveau{" "}
                 <span className="text-red-500">réseau mobile</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+              <p className="text-lg font-body md:text-xl text-white/90 leading-relaxed max-w-xl">
                 Découvrez une expérience mobile révolutionnaire. Migration
                 simple, couverture optimale, tarifs transparents.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 font-body">
               <Link
                 href="/form"
                 className="group relative w-full sm:w-auto bg-gradient-to-r from-red-700 to-red-700/80 text-red-500-foreground px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"

@@ -154,7 +154,7 @@ export default function FormPage() {
           <div
             className={`space-y-4 mb-10 text-center ${isMounted ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground  text-balance">
+            <h2 className="text-3xl font-heading font-extrabold  sm:text-4xl lg:text-5xl  text-foreground  text-balance">
               Formulaire de portabilité
             </h2>
             <p className="text-base text-red-500 max-w-3xl leading-relaxed">

@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Mogra&family=Mulish:wght@400;600&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-heading: 'Lexend Deca', sans-serif;
+  --font-body: 'Mulish', sans-serif;
+}
+
 
 :root {
   --background: oklch(0.98 0.001 0);
@@ -75,7 +82,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
+   --font-sans: 'Mulish', sans-serif; 
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);

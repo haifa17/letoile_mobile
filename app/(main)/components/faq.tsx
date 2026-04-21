@@ -65,7 +65,7 @@ export default function FAQ() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <HelpCircle className="w-8 h-8 text-red-500" />
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-foreground text-balance">
               Questions <span className="text-red-500">fréquentes</span>
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed">

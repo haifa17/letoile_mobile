@@ -29,7 +29,7 @@ export default function Migration() {
           <div
             className={`space-y-4 ${isMounted ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h2 className="text-3xl font-heading font-extrabold sm:text-4xl lg:text-5xl text-foreground text-balance">
               <span className="text-red-500">Migration Simplifiée</span> en 3
               étapes
             </h2>

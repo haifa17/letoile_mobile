@@ -3,9 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "LETOILE MOBILE - Votre nouveau réseau mobile",
   description:
@@ -24,7 +21,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="bg-background">
-      <body className="font-sans antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sekuya&family=Mulish:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
         {" "}
         <Providers>{children}</Providers>
       </body>

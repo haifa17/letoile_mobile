@@ -102,7 +102,7 @@ export default function Offers() {
           <div
             className={`text-center space-y-4 ${isMounted ? "animate-fade-in-up" : "opacity-0"}`}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            <h2 className="text-3xl font-heading font-extrabold sm:text-4xl lg:text-5xl  text-foreground text-balance">
               Nos{" "}
               <span className="bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent">
                 Offres
@@ -162,7 +162,7 @@ export default function Offers() {
                 {currentOffer.items.map((item, idx) => (
                   <div key={idx} className="space-y-6 group">
                     <div className="space-y-4">
-                      <h3 className="text-3xl md:text-4xl font-bold text-foreground group-hover:text-red-500 transition-colors">
+                      <h3 className="text-3xl font-heading font-extrabold md:text-4xl text-foreground group-hover:text-red-500 transition-colors">
                         {item.name}
                       </h3>
                       <p className="text-lg text-foreground/70 leading-relaxed">
