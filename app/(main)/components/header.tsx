@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white backdrop-blur-md shadow-lg" : "bg-stone-800 shadow-lg"}`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white backdrop-blur-md shadow-lg" : "bg-red-950 bg-gradient-to-r from-red-900 via-red-900/50 to-transparent  shadow-lg"}`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link
@@ -29,12 +29,12 @@ export default function Header() {
         >
           <div className="w-10 h-10 relative flex-shrink-0 group-hover:scale-110 transition-transform">
             <img
-              src="/logo.svg"
+              src="/logo.jpg"
               alt="LETOILE MOBILE"
               className="object-contain w-full h-full"
             />
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent hidden sm:block">
+          <span className={`${isScrolled ? "text-foreground" : "text-white"} }text-xl font-bold bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent hidden sm:block`}>
             LETOILE MOBILE
           </span>
         </Link>
@@ -66,16 +66,16 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <button
             onClick={() => router.push("/form")}
-            className="hidden cursor-pointer sm:block group relative bg-primary text-primary-foreground px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 transform hover:scale-105"
+            className="hidden cursor-pointer sm:block group relative bg-red-500 text-white px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
           >
             <span className="relative z-10">Formulaire</span>
-            <div className="absolute inset-0 bg-primary/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-red-700/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
           </button>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors hover:text-primary ${isScrolled ? "text-foreground/70 hover:text-foreground" : "text-white hover:text-white/70"}`}
+            className={`md:hidden p-2 hover:bg-red-700/10 rounded-lg transition-colors hover:text-red-700 ${isScrolled ? "text-foreground/70 hover:text-foreground" : "text-white hover:text-white/70"}`}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -112,7 +112,7 @@ export default function Header() {
             ))}
             <Link
               href="/form"
-              className="w-full bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition font-bold mt-4"
+              className="w-full bg-primary text-white px-6 py-2 rounded-lg hover:bg-red-700/90 transition font-bold mt-4"
             >
               Formulaire
             </Link>

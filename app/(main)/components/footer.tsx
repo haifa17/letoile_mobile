@@ -13,7 +13,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-b from-foreground to-black text-white relative overflow-hidden pointer-events-none">
+    <footer className="bg-red-950 bg-gradient-to-r from-red-90 via-red-950/50 to-transparent text-white relative overflow-hidden pointer-events-none">
       {/* Animated background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float opacity-50={value.toString()}."></div>
       <div
@@ -33,12 +33,12 @@ export default function Footer() {
             >
               <div className="w-10 h-10 relative flex-shrink-0 group-hover:scale-110 transition-transform">
                 <img
-                  src="/logo.svg"
+                  src="/logo.jpg"
                   alt="LETOILE MOBILE"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-white">
                 LETOILE MOBILE
               </span>
             </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-primary transition duration-300 text-sm group inline-block"
+                    className="text-white/70 hover:text-red-500 transition duration-300 text-sm group inline-block"
                   >
                     <span className="relative">
                       {link.label}
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-primary transition duration-300 text-sm group inline-block"
+                    className="text-white/70 hover:text-red-500 transition duration-300 text-sm group inline-block"
                   >
                     <span className="relative">
                       {link.label}
@@ -132,7 +132,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Link
                 href="tel:+21699999999"
-                className="flex items-center gap-2 text-white/70 hover:text-primary transition group"
+                className="flex items-center gap-2 text-white/70 hover:text-red-500 transition group"
               >
                 <Phone
                   size={18}
@@ -142,7 +142,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="mailto:support@letoile.tn"
-                className="flex items-center gap-2 text-white/70 hover:text-primary transition group"
+                className="flex items-center gap-2 text-white/70 hover:text-red-500 transition group"
               >
                 <Mail
                   size={18}
@@ -164,7 +164,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="hover:text-primary transition duration-300 inline-block relative group"
+                  className="hover:text-red-500 transition duration-300 inline-block relative group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>

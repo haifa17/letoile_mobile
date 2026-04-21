@@ -111,7 +111,7 @@ export default function RegisterForm() {
       </Button>
       <div className="text-xs flex justify-end gap-1 mt-2 text-muted-foreground">
         Vous avez déjà un compte?{" "}
-        <Link href="/login" className="text-primary hover:underline">
+        <Link href="/login" className="text-red-500 hover:underline">
           Se connecter
         </Link>
       </div>

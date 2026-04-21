@@ -45,7 +45,7 @@ export const Sidebar = ({
               >
                 <div className="w-20 h-20 relative ">
                   <img
-                    src="/logo.svg"
+                    src="/logo.p"
                     alt="LETOILE MOBILE"
                     className="object-contain w-full h-full"
                   />

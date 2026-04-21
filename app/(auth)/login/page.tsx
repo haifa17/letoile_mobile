@@ -19,7 +19,7 @@ const page = () => {
           >
             <div className="w-20 h-20 relative flex-shrink-0 group-hover:scale-110 transition-transform">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="LETOILE MOBILE"
                 className="object-contain w-full h-full"
               />

@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     "Découvrez une expérience mobile révolutionnaire avec LETOILE MOBILE. Migration simple, couverture optimale, tarifs transparents.",
   generator: "v0.app",
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
   },
 };
 

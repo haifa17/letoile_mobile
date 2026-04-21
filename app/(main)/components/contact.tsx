@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-14 sm:py-32 bg-gradient-to-b from-background via-secondary/30 to-background relative overflow-hidden"
+      className="py-14 sm:py-32 bg-gradient-to-b from-secondary to-background relative overflow-hidden"
     >
       {/* Contact CTA */}
       <div
@@ -51,13 +51,13 @@ export default function Contact() {
             Notre équipe est prête à vous aider 24 heures sur 24, 7 jours sur 7.
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col px-4 md:px-0 sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => setOpenDialog(true)}
-            className="group cursor-pointer relative w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 transform hover:scale-105"
+            className="group cursor-pointer relative w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-500/80 text-white px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
           >
             <span className="relative z-10">Contacter le support</span>
-            <div className="absolute inset-0 bg-primary/50 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-red-500/50 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
           </button>
           <p className="text-sm text-foreground/60">
             💬 Chat disponible 24h

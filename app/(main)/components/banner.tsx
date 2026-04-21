@@ -15,7 +15,7 @@ export default function Banner() {
       <div 
         className="absolute inset-0"
         style={{
-          backgroundImage: 'url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/653710168_1349515497212478_5257913358146839583_n-nGu1fKz1ujZZ1jxCQDZ0N3IhtYSisG.jpg)',
+          backgroundImage: 'url(portabilite.jpg)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundAttachment: 'fixed',

@@ -157,7 +157,7 @@ export default function FormPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground  text-balance">
               Formulaire de portabilité
             </h2>
-            <p className="text-base text-primary max-w-3xl leading-relaxed">
+            <p className="text-base text-red-500 max-w-3xl leading-relaxed">
               Gardez votre numéro et rejoignez Letoile Mobile
             </p>
           </div>

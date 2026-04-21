@@ -1,7 +1,7 @@
 export const migrationSteps = [
   {
     number: "1",
-    title: "Composer *202#",
+    title: "Composer *172#",
     description: "Lancez la migration vers LETOILE MOBILE.",
     icon: "📞",
   },
@@ -48,7 +48,7 @@ export const faqs = [
   {
     question: "Comment migrer depuis un autre opérateur ?",
     answer:
-      "Vous pouvez migrer en composant *202# depuis votre ligne actuelle. Suivez les instructions et recevez votre nouvelle SIM en moins de 48 heures. Le processus est gratuit et simple!",
+      "Vous pouvez migrer en composant *172# depuis votre ligne actuelle. Suivez les instructions et recevez votre nouvelle SIM en moins de 48 heures. Le processus est gratuit et simple!",
   },
   {
     question: "Puis-je conserver mon numéro ?",
