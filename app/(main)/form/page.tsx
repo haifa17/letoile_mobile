@@ -36,7 +36,7 @@ const INITIAL: FormState = {
 function Success() {
   return (
     <div className="flex flex-col items-center justify-center gap-6 py-10 text-center">
-      <div className="w-20 h-20 rounded-full bg-red-500 text-white flex items-center justify-center text-4xl animate-bounce">
+      <div className="w-20 h-20 rounded-full bg-red-700 text-white flex items-center justify-center text-4xl animate-bounce">
         ✓
       </div>
       <div>
@@ -53,7 +53,7 @@ function Success() {
       </p>
       <Link
         href="/"
-        className="text-red-500 hover:text-red-700 font-medium flex items-center gap-1"
+        className="text-red-700 hover:text-red-700 font-medium flex items-center gap-1"
       >
         Retour à l'accueil <Undo2 size={20} />
       </Link>
@@ -157,7 +157,7 @@ export default function FormPage() {
             <h2 className="text-3xl font-heading font-extrabold  sm:text-4xl lg:text-5xl  text-foreground  text-balance">
               Formulaire de portabilité
             </h2>
-            <p className="text-base text-red-500 max-w-3xl leading-relaxed">
+            <p className="text-base text-red-700 max-w-3xl leading-relaxed">
               Gardez votre numéro et rejoignez Letoile Mobile
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function FormPage() {
             {/* Progress bar */}
             <div className="h-1 bg-gray-100">
               <div
-                className="h-full bg-red-500 transition-all duration-500 ease-out"
+                className="h-full bg-red-700 transition-all duration-500 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -188,9 +188,9 @@ export default function FormPage() {
                         className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-300
                       ${
                         done
-                          ? "bg-red-500 border-red-500 text-white"
+                          ? "bg-red-700 border-red-700 text-white"
                           : active
-                            ? "bg-red-500 border-red-500 text-white scale-110"
+                            ? "bg-red-700 border-red-700 text-white scale-110"
                             : "bg-white border-gray-300 text-gray-400"
                       }`}
                       >
@@ -236,7 +236,7 @@ export default function FormPage() {
                     type="button"
                     onClick={() => setStep((s) => s + 1)}
                     disabled={!canNext()}
-                    className="px-8 py-3.5 bg-red-500 text-white rounded-2xl font-semibold text-sm
+                    className="px-8 py-3.5 bg-red-700 text-white rounded-2xl font-semibold text-sm
                     hover:bg-red-800 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed transition-all"
                   >
                     Suivant
@@ -245,7 +245,7 @@ export default function FormPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="px-8 py-3.5 cursor-pointer bg-red-500 text-white rounded-2xl font-semibold text-sm hover:bg-red-800 transition-all"
+                    className="px-8 py-3.5 cursor-pointer bg-red-700 text-white rounded-2xl font-semibold text-sm hover:bg-red-800 transition-all"
                   >
                     {isSubmitting ? "Envoi en cours..." : "Soumettre"}
                   </button>

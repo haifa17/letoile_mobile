@@ -56,7 +56,7 @@ const Chatbot = () => {
       {/* Floating button */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className="fixed cursor-pointer bottom-18 right-4 z-50 w-14 h-14 rounded-full bg-primary text-white shadow-lg flex items-center justify-center hover:scale-105 transition"
+        className="fixed cursor-pointer bottom-18 right-4 z-50 w-14 h-14 rounded-full bg-red-700 text-white shadow-lg flex items-center justify-center hover:scale-105 transition"
       >
         {open ? <X size={22} /> : <MessageCircle size={22} />}
       </button>
@@ -65,7 +65,7 @@ const Chatbot = () => {
       {open && (
         <div className="fixed bottom-32 right-6 z-50 w-80 sm:w-96 h-[500px] bg-background border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-primary px-4 py-3 flex items-center gap-3">
+          <div className="bg-red-700 px-4 py-3 flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
               <Bot size={16} className="text-white" />
             </div>
@@ -87,7 +87,7 @@ const Chatbot = () => {
                 <div
                   className={`max-w-[80%] px-3 py-2 rounded-2xl text-sm leading-relaxed ${
                     msg.role === "user"
-                      ? "bg-primary text-white rounded-br-sm"
+                      ? "bg-red-700 text-white rounded-br-sm"
                       : "bg-muted text-foreground rounded-bl-sm"
                   }`}
                 >
@@ -131,7 +131,7 @@ const Chatbot = () => {
             <button
               onClick={sendMessage}
               disabled={isLoading || !input.trim()}
-              className="w-9 h-9 rounded-full bg-primary text-white flex items-center justify-center hover:opacity-90 disabled:opacity-40 transition"
+              className="w-9 h-9 rounded-full bg-red-700 text-white flex items-center justify-center hover:opacity-90 disabled:opacity-40 transition"
             >
               <Send size={15} />
             </button>

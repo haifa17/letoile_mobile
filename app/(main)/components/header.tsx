@@ -35,7 +35,7 @@ export default function Header() {
             />
           </div>
           <span
-            className={`${isScrolled ? "text-foreground" : "text-white"} }text-xl font-bold bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent hidden sm:block`}
+            className={`${isScrolled ? "text-red-700" : "text-white"} }text-xl font-bold hidden sm:block`}
           >
             LETOILE MOBILE
           </span>
@@ -68,7 +68,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <button
             onClick={() => router.push("/form")}
-            className="hidden cursor-pointer sm:block group relative bg-red-500 text-white px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
+            className="hidden cursor-pointer sm:block group relative bg-red-700 text-white px-6 py-2 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-700/50 transform hover:scale-105"
           >
             <span className="relative z-10">Formulaire</span>
             <div className="absolute inset-0 bg-red-700/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>

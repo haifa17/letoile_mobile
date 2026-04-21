@@ -54,10 +54,10 @@ export default function Contact() {
         <div className="flex flex-col px-4 md:px-0 sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => setOpenDialog(true)}
-            className="group cursor-pointer relative w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-500/80 text-white px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
+            className="group cursor-pointer relative w-full sm:w-auto bg-gradient-to-r from-red-700 to-red-700/80 text-white px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-700/50 transform hover:scale-105"
           >
             <span className="relative z-10">Contacter le support</span>
-            <div className="absolute inset-0 bg-red-500/50 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
+            <div className="absolute inset-0 bg-red-700/50 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
           </button>
           <p className="text-sm text-foreground/60">
             💬 Chat disponible 24h

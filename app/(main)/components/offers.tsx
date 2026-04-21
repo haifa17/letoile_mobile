@@ -40,7 +40,7 @@ export default function Offers() {
       id: "privileges",
       title: "Avantages exclusifs",
       icon: Users,
-      color: "from-red-500 to-pink-500",
+      color: "from-red-700 to-pink-500",
       image: "offer2.jpg",
       items: [
         {
@@ -90,9 +90,9 @@ export default function Offers() {
       className="py-20 sm:py-32 bg-gradient-to-b from-secondary to-background relative overflow-hidden"
     >
       {/* Animated Background */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-red-700/5 rounded-full blur-3xl animate-float"></div>
       <div
-        className="absolute bottom-0 left-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-float"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-red-700/5 rounded-full blur-3xl animate-float"
         style={{ animationDelay: "3s" }}
       ></div>
 
@@ -104,7 +104,7 @@ export default function Offers() {
           >
             <h2 className="text-3xl font-heading font-extrabold sm:text-4xl lg:text-5xl  text-foreground text-balance">
               Nos{" "}
-              <span className="bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-700 to-red-700/80 bg-clip-text text-transparent">
                 Offres
               </span>{" "}
               Exceptionnelles
@@ -127,8 +127,8 @@ export default function Offers() {
                   onClick={() => setActiveTab(offer.id)}
                   className={`flex  items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform ${
                     activeTab === offer.id
-                      ? "bg-gradient-to-r from-red-500 to-red-500/80 text-white shadow-lg shadow-red-500/50 scale-105"
-                      : "bg-background border-2 border-border text-foreground hover:border-red-500 hover:bg-red-500/5"
+                      ? "bg-gradient-to-r from-red-700 to-red-700/80 text-white shadow-lg shadow-red-700/50 scale-105"
+                      : "bg-background border-2 border-border text-foreground hover:border-red-700 hover:bg-red-700/5"
                   }`}
                 >
                   <Icon size={20} />
@@ -162,13 +162,13 @@ export default function Offers() {
                 {currentOffer.items.map((item, idx) => (
                   <div key={idx} className="space-y-6 group">
                     <div className="space-y-4">
-                      <h3 className="text-3xl font-heading font-extrabold md:text-4xl text-foreground group-hover:text-red-500 transition-colors">
+                      <h3 className="text-3xl font-heading font-extrabold md:text-4xl text-foreground group-hover:text-red-700 transition-colors">
                         {item.name}
                       </h3>
                       <p className="text-lg text-foreground/70 leading-relaxed">
                         {item.description}
                       </p>
-                      <div className="text-4xl font-bold bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-red-700 to-red-700/80 bg-clip-text text-transparent">
                         {item.price}
                       </div>
                     </div>
@@ -190,10 +190,10 @@ export default function Offers() {
 
                     <button
                       onClick={() => router.push("/form")}
-                      className="w-full group/btn relative bg-gradient-to-r from-red-500 to-red-500/80 text-white px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
+                      className="w-full group/btn relative bg-gradient-to-r from-red-700 to-red-700/80 text-white px-8 py-4 rounded-lg font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-700/50 transform hover:scale-105"
                     >
                       <span className="relative z-10">{item.cta}</span>
-                      <div className="absolute inset-0 bg-red-500/50 -z-0 group-hover/btn:scale-110 transition-transform duration-300"></div>
+                      <div className="absolute inset-0 bg-red-700/50 -z-0 group-hover/btn:scale-110 transition-transform duration-300"></div>
                     </button>
                   </div>
                 ))}

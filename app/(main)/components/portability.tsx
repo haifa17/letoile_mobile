@@ -47,9 +47,9 @@ export default function Portability() {
       className="py-20 sm:py-32 bg-gradient-to-b from-background via-background to-secondary relative overflow-hidden"
     >
       {/* Animated Background Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-red-700/5 rounded-full blur-3xl animate-float"></div>
       <div
-        className="absolute bottom-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-float"
+        className="absolute bottom-0 right-0 w-96 h-96 bg-red-700/5 rounded-full blur-3xl animate-float"
         style={{ animationDelay: "2s" }}
       ></div>
 
@@ -61,7 +61,7 @@ export default function Portability() {
           >
             <h2 className="text-3xl font-heading font-extrabold sm:text-4xl lg:text-5xl text-foreground text-balance">
               Portabilité —{" "}
-              <span className="text-red-500">gardez votre numéro</span>
+              <span className="text-red-700">gardez votre numéro</span>
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl leading-relaxed">
               Changez pour LETOILE MOBILE en conservant votre numéro (RIO
@@ -74,7 +74,7 @@ export default function Portability() {
             {/* Left: Steps with Connecting Line */}
             <div className="relative">
               {/* Connecting line for desktop */}
-              <div className="hidden md:block absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-red-500/50 to-red-500/0"></div>
+              <div className="hidden md:block absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-red-700 via-red-700/50 to-red-700/0"></div>
 
               <div className="grid gap-8">
                 {portability_steps.map((step, idx) => (
@@ -86,11 +86,11 @@ export default function Portability() {
                     }}
                   >
                     <div className="flex flex-col gap-4">
-                      <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-red-500 to-red-500/80 text-red-500-foreground text-4xl font-bold shadow-lg shadow-red-500/30 group-hover:scale-110 transition-transform duration-300">
+                      <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-red-700 to-red-700/80 text-red-700-foreground text-4xl font-bold shadow-lg shadow-red-700/30 group-hover:scale-110 transition-transform duration-300">
                         {step.number}
                       </div>
                       <div className="space-y-2">
-                        <h3 className="text-xl font-bold text-foreground group-hover:text-red-500 transition-colors">
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-red-700 transition-colors">
                           {step.title}
                         </h3>
                         <p className="text-foreground/70 leading-relaxed">
@@ -100,7 +100,7 @@ export default function Portability() {
                     </div>
 
                     {/* Animated checkmark for completed steps (visual enhancement) */}
-                    <div className="flex items-center gap-2 text-red-500 group-hover:gap-3 transition-all duration-300">
+                    <div className="flex items-center gap-2 text-red-700 group-hover:gap-3 transition-all duration-300">
                       <CheckCircle2
                         size={20}
                         className="group-hover:scale-125 transition-transform"
@@ -161,7 +161,7 @@ export default function Portability() {
 
           {/* CTA and Info */}
           <div
-            className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 bg-gradient-to-r from-red-500/10 to-red-500/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 hover:border-red-500/40 transition-all duration-300 ${isMounted ? "animate-scale-in" : "opacity-0"}`}
+            className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 bg-gradient-to-r from-red-700/10 to-red-700/5 backdrop-blur-sm border border-red-700/20 rounded-2xl p-8 hover:border-red-700/40 transition-all duration-300 ${isMounted ? "animate-scale-in" : "opacity-0"}`}
           >
             <div className="space-y-2">
               <p className="text-foreground/80 font-medium">
@@ -174,14 +174,14 @@ export default function Portability() {
             <div className="flex gap-3 w-full sm:w-auto">
               <Link
                 href="#contact"
-                className="flex-1 sm:flex-none group relative bg-red-500 text-white px-6 py-3 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-500/50 transform hover:scale-105"
+                className="flex-1 sm:flex-none group relative bg-red-700 text-white px-6 py-3 rounded-lg font-bold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-red-700/50 transform hover:scale-105"
               >
                 <span className="relative z-10">En savoir plus</span>
-                <div className="absolute inset-0 bg-red-500/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-red-700/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
               </Link>
               <Link
                 href="/form"
-                className="flex-1 sm:flex-none border-2 border-red-500 text-red-500 px-6 py-3 rounded-lg font-bold hover:bg-red-500/10 transition-all duration-300 backdrop-blur-sm"
+                className="flex-1 sm:flex-none border-2 border-red-700 text-red-700 px-6 py-3 rounded-lg font-bold hover:bg-red-700/10 transition-all duration-300 backdrop-blur-sm"
               >
                 Formulaire
               </Link>

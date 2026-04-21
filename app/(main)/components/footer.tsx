@@ -88,7 +88,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-red-500 transition duration-300 text-sm group inline-block"
+                    className="text-white/70 hover:text-red-700 transition duration-300 text-sm group inline-block"
                   >
                     <span className="relative">
                       {link.label}
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-red-500 transition duration-300 text-sm group inline-block"
+                    className="text-white/70 hover:text-red-700 transition duration-300 text-sm group inline-block"
                   >
                     <span className="relative">
                       {link.label}
@@ -132,7 +132,7 @@ export default function Footer() {
             <div className="space-y-3">
               <Link
                 href="tel:+21699999999"
-                className="flex items-center gap-2 text-white/70 hover:text-red-500 transition group"
+                className="flex items-center gap-2 text-white/70 hover:text-red-700 transition group"
               >
                 <Phone
                   size={18}
@@ -142,7 +142,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="mailto:support@letoile.tn"
-                className="flex items-center gap-2 text-white/70 hover:text-red-500 transition group"
+                className="flex items-center gap-2 text-white/70 hover:text-red-700 transition group"
               >
                 <Mail
                   size={18}
@@ -164,7 +164,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="hover:text-red-500 transition duration-300 inline-block relative group"
+                  className="hover:text-red-700 transition duration-300 inline-block relative group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>

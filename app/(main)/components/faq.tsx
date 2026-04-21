@@ -63,10 +63,10 @@ export default function FAQ() {
             className={`text-center space-y-4 ${isMounted ? "animate-fade-in-up" : "opacity-0"}`}
           >
             <div className="flex items-center justify-center gap-2 mb-4">
-              <HelpCircle className="w-8 h-8 text-red-500" />
+              <HelpCircle className="w-8 h-8 text-red-700" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-foreground text-balance">
-              Questions <span className="text-red-500">fréquentes</span>
+              Questions <span className="text-red-700">fréquentes</span>
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed">
               Trouvez rapidement les réponses à vos questions les plus
@@ -137,14 +137,14 @@ export default function FAQ() {
                     onClick={() => setOpenId(openId === idx ? null : idx)}
                     className="w-full px-6 py-5 flex items-center justify-between hover:bg-primary/5 transition-colors duration-300"
                   >
-                    <span className="text-lg font-semibold text-foreground text-left group-hover:text-red-500 transition-colors duration-300">
+                    <span className="text-lg font-semibold text-foreground text-left group-hover:text-red-700 transition-colors duration-300">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`flex-shrink-0 w-6 h-6 text-red-500 transition-all duration-300 group-hover:scale-110 ${
+                      className={`flex-shrink-0 w-6 h-6 text-red-700 transition-all duration-300 group-hover:scale-110 ${
                         openId === idx
-                          ? "rotate-180 text-red-500"
-                          : "text-red-500/60 group-hover:text-red-500"
+                          ? "rotate-180 text-red-700"
+                          : "text-red-700/60 group-hover:text-red-700"
                       }`}
                     />
                   </button>

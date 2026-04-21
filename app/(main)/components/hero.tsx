@@ -41,7 +41,7 @@ export default function Hero() {
             <div className="space-y-4 ">
               <h1 className="text-5xl  font-heading capitalize md:text-6xl lg:text-7xl font-extrabold text-white text-balance leading-tight">
                 Votre nouveau{" "}
-                <span className="text-red-500">réseau mobile</span>
+                <span className="text-red-700">réseau mobile</span>
               </h1>
 
               <p className="text-lg font-body md:text-xl text-white/90 leading-relaxed max-w-xl">
