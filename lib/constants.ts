@@ -14,7 +14,7 @@ export const migrationSteps = [
   {
     number: "3",
     title: "Frais d'activation",
-    description: "Paiement unique de 2 DT.",
+    description: "La portabilité est totalement gratuite chez LETOILE MOBILE.",
     icon: "✅",
   },
 ];
