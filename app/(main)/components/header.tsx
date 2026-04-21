@@ -34,7 +34,9 @@ export default function Header() {
               className="object-contain w-full h-full"
             />
           </div>
-          <span className={`${isScrolled ? "text-foreground" : "text-white"} }text-xl font-bold bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent hidden sm:block`}>
+          <span
+            className={`${isScrolled ? "text-foreground" : "text-white"} }text-xl font-bold bg-gradient-to-r from-red-500 to-red-500/80 bg-clip-text text-transparent hidden sm:block`}
+          >
             LETOILE MOBILE
           </span>
         </Link>
@@ -71,7 +73,6 @@ export default function Header() {
             <span className="relative z-10">Formulaire</span>
             <div className="absolute inset-0 bg-red-700/80 -z-0 group-hover:scale-110 transition-transform duration-300"></div>
           </button>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
