@@ -21,7 +21,7 @@ export default function Hero() {
         }}
       >
         {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent opacity-85"></div>
 
         {/* Animated gradient elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"></div>
