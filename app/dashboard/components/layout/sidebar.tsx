@@ -75,7 +75,7 @@ export const Sidebar = ({
             className="w-full flex items-center gap-2 hover:text-white hover:scale-95 bg-gradient-to-r from-red-500 to-red-900 border-none cursor-pointer"
           >
             <LogOut className="h-4 w-4" />
-            Logout
+            Se déconnecter
           </Button>
 
           <div className="mt-4 text-center text-xs text-gray-200">

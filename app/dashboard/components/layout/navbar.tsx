@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, UserStar } from "lucide-react";
+import { LogOut, Menu, UserStar } from "lucide-react";
 import axios from "axios";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
   const [user, setUser] = useState<any>(null);
-
+  const router = useRouter();
   useEffect(() => {
     axios.get("/api/me").then((res) => {
       setUser(res.data);
@@ -27,6 +29,16 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => {
         <UserStar size={20} />
         {user && <div className="text-sm font-medium">{user.email}</div>}
       </div>
+      <Button
+        className="cursor-pointer "
+        onClick={async () => {
+          await axios.post("/api/auth/logout");
+          router.push("/login");
+          router.refresh();
+        }}
+      >
+        <LogOut className="h-4 w-4" />
+      </Button>
     </header>
   );
 };
