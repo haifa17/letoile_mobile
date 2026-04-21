@@ -10,7 +10,7 @@ export default function Banner() {
   }, [])
 
   return (
-    <div className={`relative h-32 md:h-48 overflow-hidden bg-gradient-to-r from-foreground via-foreground to-foreground/95 ${isMounted ? 'animate-fade-in-up' : 'opacity-0'}`}>
+    <div className={`relative h-32 md:h-48  bg-gradient-to-r from-foreground via-foreground to-foreground/95 ${isMounted ? 'animate-fade-in-up' : 'opacity-0'}`}>
       {/* Background Image */}
       <div 
         className="absolute inset-0"
