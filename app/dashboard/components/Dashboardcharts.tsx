@@ -91,7 +91,7 @@ export function DashboardCharts({ contacts, portability }: DashboardChartsProps)
       {/* Area Chart — Portability over time */}
       <Card className="col-span-1 lg:col-span-2">
         <CardHeader>
-          <CardTitle className="text-sm font-semibold text-foreground">
+          <CardTitle className="text-sm font-heading  font-semibold text-foreground">
             Formulaires de portabilité — évolution dans le temps
           </CardTitle>
         </CardHeader>
@@ -144,7 +144,7 @@ export function DashboardCharts({ contacts, portability }: DashboardChartsProps)
       {/* Bar Chart — Monthly comparison */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-sm font-semibold text-foreground">
+          <CardTitle className="text-sm font-heading font-semibold text-foreground">
             Comparaison mensuelle
           </CardTitle>
         </CardHeader>
@@ -187,7 +187,7 @@ export function DashboardCharts({ contacts, portability }: DashboardChartsProps)
       {/* Donut Chart — Proportion */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-sm font-semibold text-foreground">
+          <CardTitle className="text-sm font-heading font-semibold text-foreground">
             Répartition des formulaires
           </CardTitle>
         </CardHeader>

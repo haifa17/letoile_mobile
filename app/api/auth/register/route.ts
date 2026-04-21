@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     // 1. Validate fields
     if (!email || !password) {
       return NextResponse.json(
-        { error: "Email and password are required" },
+        { error: "Email et mot de passe sont requis" },
         { status: 400 },
       );
     }
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     const existingUser = await prisma.user.findUnique({ where: { email } });
     if (existingUser) {
       return NextResponse.json(
-        { error: "User already exists" },
+        { error: "Cet utilisateur existe déjà" },
         { status: 409 },
       );
     }
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     );
   } catch (error) {
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Erreur interne du serveur" },
       { status: 500 },
     );
   }

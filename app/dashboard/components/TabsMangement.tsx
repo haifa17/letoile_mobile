@@ -2,27 +2,27 @@
 
 import ContactsPage from "./ContactsPage";
 import { DashboardPage } from "./DashboardPage";
+import InfoPage from "./InfoPage";
 import FormsPage from "./PortabilityFormsPage";
 import { QRCodePage } from "./QRPage";
 
-
 interface Props {
-  activeTab: "dashboard" |"form"|"contact"| "qr" | "info"
+  activeTab: "dashboard" | "form" | "contact" | "qr" | "info";
 }
 
 export function TabsMangement({ activeTab }: Props) {
   switch (activeTab) {
-     case "dashboard":
+    case "dashboard":
       return <DashboardPage />;
     case "form":
-      return <FormsPage/>;
+      return <FormsPage />;
     case "contact":
-      return <ContactsPage/>;
+      return <ContactsPage />;
     case "qr":
-      return <QRCodePage/>;
+      return <QRCodePage />;
 
-    // case "info":
-    //   return <RestaurantInfoPage restaurantId={restaurantId} />;
+    case "info":
+      return <InfoPage />;
     default:
       return null;
   }

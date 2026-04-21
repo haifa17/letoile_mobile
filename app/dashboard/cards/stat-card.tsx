@@ -21,7 +21,7 @@ export function StatCard({ title, value, icon, description, trend }: StatCardPro
       <CardContent className="">
         <div className="flex items-start justify-between">
           <div className="space-y-2">
-            <p className="text-sm font-medium text-muted-foreground">{title}</p>
+            <p className="text-sm font-bold text-muted-foreground">{title}</p>
             <p className="text-2xl font-bold text-foreground ">{value}</p>
             {description && <p className="text-xs text-muted-foreground">{description}</p>}
             {trend && (

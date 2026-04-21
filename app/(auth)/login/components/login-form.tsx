@@ -77,7 +77,7 @@ export default function LoginForm() {
 
       <Button
         type="submit"
-        className="w-full cursor-pointer bg-red-600"
+        className="w-full cursor-pointer bg-red-700"
         disabled={isPending}
       >
         {isPending ? "Connexion..." : "Se connecter"}

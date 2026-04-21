@@ -4,7 +4,7 @@ import "./../globals.css";
 import { Sidebar } from "./components/layout/sidebar";
 import { useState } from "react";
 import Header from "./components/layout/navbar";
-
+import { ToastContainer } from "react-toastify";
 export default function DashboardLayout({
   children,
 }: Readonly<{
@@ -24,6 +24,7 @@ export default function DashboardLayout({
           <main className="flex-1 ">{children}</main>
         </div>
       </div>
+      <ToastContainer />
     </TabProvider>
   );
 }

@@ -26,7 +26,7 @@ export const Sidebar = ({
 
       <aside
         className={`
-          fixed top-0 left-0 z-50 h-screen w-72 bg-stone-900 text-white
+          fixed top-0 left-0 z-50 h-screen w-72 bg-red-900 text-white
           transform transition-transform duration-300
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
           lg:translate-x-0 
@@ -45,12 +45,12 @@ export const Sidebar = ({
               >
                 <div className="w-20 h-20 relative ">
                   <img
-                    src="/logo.p"
+                    src="/logo.jpg"
                     alt="LETOILE MOBILE"
                     className="object-contain w-full h-full"
                   />
                 </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent hidden sm:block">
+                <span className="text-2xl font-extrabold bg-clip-text font-heading text-white  hidden sm:block">
                   LETOILE MOBILE
                 </span>
               </Link>

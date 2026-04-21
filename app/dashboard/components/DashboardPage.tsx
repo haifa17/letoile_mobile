@@ -30,7 +30,7 @@ export function DashboardPage() {
     <div className="space-y-8">
       {/* Page Header */}
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Tableau de bord</h1>
+        <h1 className="text-2xl font-bold text-foreground font-heading">Tableau de bord</h1>
         <p className="text-muted-foreground mt-1">
           Bienvenue ! Voici un aperçu de votre plateforme.{" "}
         </p>
@@ -63,7 +63,7 @@ export function DashboardPage() {
 
       {/* Quick Actions */}
       <div>
-        <h2 className="text-lg font-semibold text-foreground mb-4">
+        <h2 className="text-lg font-heading  font-semibold text-foreground mb-4">
           Actions rapides
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

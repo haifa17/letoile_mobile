@@ -19,12 +19,12 @@ const page = () => {
           >
             <div className="w-20 h-20 relative flex-shrink-0 group-hover:scale-110 transition-transform">
               <img
-                src="/logo.png"
+                src="/logo.jpg"
                 alt="LETOILE MOBILE"
                 className="object-contain w-full h-full"
               />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent hidden sm:block">
+            <span className="text-2xl font-bold bg-gradient-to-r from-red-700 to-red-700/80 bg-clip-text text-transparent hidden sm:block">
               LETOILE MOBILE
             </span>
           </Link>

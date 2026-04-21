@@ -1,13 +1,12 @@
-import React from 'react'
-import { Card } from '@/components/ui/card';
-import { useQRCodeGeneration } from '../queries/useQRCodeGeneration';
-import { useQRCodeActions } from '../queries/useQRCodeActions';
-import { MESSAGES } from './qrcode/constants';
-import { QRCodeDisplay } from './qrcode/QRCodeDisplay';
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { useQRCodeGeneration } from "../queries/useQRCodeGeneration";
+import { useQRCodeActions } from "../queries/useQRCodeActions";
+import { MESSAGES } from "./qrcode/constants";
+import { QRCodeDisplay } from "./qrcode/QRCodeDisplay";
 
 const URL = "https://letoile-mobile.vercel.app/";
 export function QRCodePage() {
-
   try {
   } catch (error) {
     return (
@@ -33,11 +32,11 @@ export function QRCodePage() {
     <div className=" space-y-6">
       {/* Header */}
       <header className=" space-y-1">
-        <h2 className="text-2xl font-bold ">{MESSAGES.TITLE}</h2>
+        <h1 className="text-2xl font-heading font-bold ">
+          {MESSAGES.TITLE}
+        </h1>
         <p className="text-muted-foreground ">{MESSAGES.SUBTITLE}</p>
-        <p className="text-xs text-muted-foreground  ">
-         LETOILE MOBILE
-        </p>
+        <p className="text-xs text-muted-foreground  ">LETOILE MOBILE</p>
       </header>
 
       {/* Main QR Code Display */}
@@ -65,4 +64,3 @@ export function QRCodePage() {
     </div>
   );
 }
-
